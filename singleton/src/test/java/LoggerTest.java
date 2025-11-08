@@ -98,11 +98,4 @@ public class LoggerTest {
         assertSame(cls1, cls2);
         System.out.println("✅ Test 6: ClassLoader protection works (private method tested)");
     }
-
-    // 7️⃣ Tổng kết cuối cùng
-    @Test
-    void testSummary() {
-        System.out.println("🎉 All Logger Singleton security checks have been tested successfully!");
-        assertTrue(true);
-    }
 }

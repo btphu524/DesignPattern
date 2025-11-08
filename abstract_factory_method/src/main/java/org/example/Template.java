@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Template {
-    String getTemplate();
+    String format(String message);
 }

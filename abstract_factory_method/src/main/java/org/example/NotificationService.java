@@ -9,8 +9,9 @@ public class NotificationService {
         this.template = factory.createTemplate();
     }
 
-    public void send() {
-        System.out.println(template.getTemplate());
-        notification.notifyUser();
+    public void process(String message) {
+        String formatted = template.format(message);
+        System.out.println("Formatted message: " + formatted);
+        notification.send();
     }
 }

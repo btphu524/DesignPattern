@@ -2,7 +2,7 @@ package org.example;
 
 public class EmailNotification implements Notification {
     @Override
-    public void notifyUser() {
+    public void send() {
         System.out.println("Sending Email Notification...");
     }
 }

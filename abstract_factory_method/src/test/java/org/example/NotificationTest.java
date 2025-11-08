@@ -7,42 +7,24 @@ public class NotificationTest {
     @Test
     public void testEmailNotification() {
         System.out.println("======================================");
-        NotificationFactory factory = new EmailNotificationFactory();
+        NotificationFactory factory = new EmailFactory();
         NotificationService service = new NotificationService(factory);
-        service.send();
+        service.process("Hello Email");
     }
 
     @Test
     public void testSMSNotification() {
         System.out.println("======================================");
-        NotificationFactory factory = new SMSNotificationFactory();
+        NotificationFactory factory = new SMSFactory();
         NotificationService service = new NotificationService(factory);
-        service.send();
+        service.process("Hello SMS");
     }
 
     @Test
     public void testPushNotification() {
         System.out.println("======================================");
-        NotificationFactory factory = new PushNotificationFactory();
+        NotificationFactory factory = new PushFactory();
         NotificationService service = new NotificationService(factory);
-        service.send();
-    }
-
-    @Test
-    public void testMultipleNotifications() {
-        System.out.println("======================================");
-        NotificationFactory factory;
-
-        // Email
-        factory = new EmailNotificationFactory();
-        new NotificationService(factory).send();
-
-        // SMS
-        factory = new SMSNotificationFactory();
-        new NotificationService(factory).send();
-
-        // Push
-        factory = new PushNotificationFactory();
-        new NotificationService(factory).send();
+        service.process("Hello Push");
     }
 }

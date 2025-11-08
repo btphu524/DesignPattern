@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Notification {
-    void notifyUser();
+    void send();
 }

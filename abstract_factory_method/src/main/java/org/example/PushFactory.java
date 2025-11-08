@@ -1,6 +1,6 @@
 package org.example;
 
-public class PushNotificationFactory implements NotificationFactory {
+public class PushFactory implements NotificationFactory {
     @Override
     public Notification createNotification() {
         return new PushNotification();

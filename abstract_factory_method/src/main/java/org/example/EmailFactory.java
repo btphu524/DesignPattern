@@ -1,13 +1,13 @@
 package org.example;
 
-public class SMSNotificationFactory implements NotificationFactory {
+public class EmailFactory implements NotificationFactory {
     @Override
     public Notification createNotification() {
-        return new SMSNotification();
+        return new EmailNotification();
     }
 
     @Override
     public Template createTemplate() {
-        return new SMSTemplate();
+        return new EmailTemplate();
     }
 }

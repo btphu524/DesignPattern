@@ -6,18 +6,18 @@ public class NotificationFactoryTest {
     @Test
     public void testEmailFactory() {
         NotificationFactory factory = new EmailFactory();
-        factory.sendNotification(); // Sending Email Notification...
+        factory.sendNotification();
     }
 
     @Test
     public void testSMSFactory() {
         NotificationFactory factory = new SMSFactory();
-        factory.sendNotification(); // Sending SMS Notification...
+        factory.sendNotification();
     }
 
     @Test
     public void testPushFactory() {
         NotificationFactory factory = new PushFactory();
-        factory.sendNotification(); // Sending Push Notification...
+        factory.sendNotification();
     }
 }

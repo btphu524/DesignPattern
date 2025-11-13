@@ -20,7 +20,7 @@ public class CommandTest {
         System.out.println("HotelService: Booking room...");
         Command bookRoom = new BookRoomCommand(hotelService);
         receptionist.takeCommand(bookRoom);
-        receptionist.processCommands(); // In ra console
+        receptionist.processCommands();
     }
 
     @Test
@@ -29,7 +29,7 @@ public class CommandTest {
         System.out.println("HotelService: Cancel booking room...");
         Command cancelBooking = new CancelBookingCommand(hotelService);
         receptionist.takeCommand(cancelBooking);
-        receptionist.processCommands(); // In ra console
+        receptionist.processCommands();
     }
 
     @Test
@@ -38,7 +38,7 @@ public class CommandTest {
         System.out.println("HotelService: Requesting room service...");
         Command requestService = new RequestServiceCommand(hotelService);
         receptionist.takeCommand(requestService);
-        receptionist.processCommands(); // In ra console
+        receptionist.processCommands();
     }
 
     @Test
@@ -48,6 +48,6 @@ public class CommandTest {
         receptionist.takeCommand(new BookRoomCommand(hotelService));
         receptionist.takeCommand(new RequestServiceCommand(hotelService));
         receptionist.takeCommand(new CancelBookingCommand(hotelService));
-        receptionist.processCommands(); // In ra console theo thứ tự
+        receptionist.processCommands();
     }
 }

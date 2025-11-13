@@ -7,7 +7,7 @@ import java.io.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LoggerTest {
-    // 1️⃣ Kiểm tra Singleton instance duy nhất
+    // Kiểm tra Singleton instance duy nhất
     @Test
     void testSingletonInstance() {
         Logger logger1 = Logger.INSTANCE;
@@ -17,7 +17,7 @@ public class LoggerTest {
         assertSame(logger1, logger2, "Logger instances must be the same");
     }
 
-    // 2️⃣ Kiểm tra dùng chung giữa các class khác nhau
+    // Kiểm tra dùng chung giữa các class khác nhau
     @Test
     void testSharedAcrossClasses() {
         class ServiceA {
@@ -34,7 +34,7 @@ public class LoggerTest {
         assertSame(loggerA, loggerB, "Both services should share the same Logger instance");
     }
 
-    // 3️⃣ Kiểm tra chống Reflection
+    // Kiểm tra chống Reflection
     @Test
     void testReflectionProtection() {
         System.out.println("✅ Test 3: Reflection protection (Enum auto-protects)");
@@ -47,7 +47,7 @@ public class LoggerTest {
         });
     }
 
-    // 4️⃣ Kiểm tra chống Cloning (Enum tự bảo vệ)
+    // Kiểm tra chống Cloning (Enum tự bảo vệ)
     @Test
     void testCloneNotSupported() {
         System.out.println("✅ Test 4: Cloning protection (Enum auto-protects)");
@@ -66,7 +66,7 @@ public class LoggerTest {
         );
     }
 
-    // 5️⃣ Kiểm tra Serialization/Deserialization không tạo object mới
+    // Kiểm tra Serialization/Deserialization không tạo object mới
     @Test
     void testSerializationProtection() throws IOException, ClassNotFoundException {
         Logger logger1 = Logger.INSTANCE;
@@ -87,7 +87,7 @@ public class LoggerTest {
         new File("logger_enum.ser").delete(); // dọn file
     }
 
-    // 6️⃣ Kiểm tra log thực tế
+    // Kiểm tra log thực tế
     @Test
     void testLogOutput() {
         System.out.println("✅ Test 6: Actual log printing");
